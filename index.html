@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-Step Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <div class="progressbar">
+      <div class="progress" id="progress"></div>
+      <div class="progress-step active"></div>
+      <div class="progress-step"></div>
+      <div class="progress-step"></div>
+      <div class="progress-step"></div>
+    </div>
+
+    <form id="multiStepForm">
+      <!-- Step 1 -->
+      <div class="form-step active">
+        <h2>Personal Info</h2>
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <div class="btns">
+          <button type="button" class="btn next">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step">
+        <h2>Address</h2>
+        <input type="text" id="address" placeholder="Address" required>
+        <input type="text" id="city" placeholder="City" required>
+        <div class="btns">
+          <button type="button" class="btn prev">Previous</button>
+          <button type="button" class="btn next">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="form-step">
+        <h2>Account Setup</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <div class="btns">
+          <button type="button" class="btn prev">Previous</button>
+          <button type="button" class="btn next">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="form-step">
+        <h2>Summary</h2>
+        <div id="summary"></div>
+        <div class="btns">
+          <button type="button" class="btn prev">Previous</button>
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

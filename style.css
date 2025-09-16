@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  width: 400px;
+  position: relative;
+}
+
+.progressbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.progressbar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #dcdcdc;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: #4a90e2;
+  transform: translateY(-50%);
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.progress-step {
+  width: 20px;
+  height: 20px;
+  background: #dcdcdc;
+  border-radius: 50%;
+  z-index: 1;
+  transition: 0.4s ease;
+}
+
+.progress-step.active {
+  background: #4a90e2;
+}
+
+.form-step {
+  display: none;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.4s ease-in-out;
+}
+
+.form-step.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #357ab8;
+}
+
+#summary {
+  text-align: left;
+  font-size: 14px;
+}
